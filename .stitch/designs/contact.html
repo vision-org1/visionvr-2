@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vision AR - Contattaci</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#faf8ff",
+                    "surface-container-highest": "#24252d",
+                    "surface-container-high": "#1e1f26",
+                    "tertiary-container": "#fd3e80",
+                    "on-tertiary-fixed": "#380014",
+                    "surface-tint": "#81ecff",
+                    "on-tertiary": "#48001c",
+                    "on-error": "#490013",
+                    "background": "#0d0e13",
+                    "on-primary-fixed-variant": "#005762",
+                    "outline": "#75757b",
+                    "surface": "#0d0e13",
+                    "error-container": "#a70138",
+                    "primary-fixed-dim": "#00d4ec",
+                    "on-background": "#f7f5fd",
+                    "tertiary-dim": "#ff6c95",
+                    "surface-container-lowest": "#000000",
+                    "secondary-dim": "#7e51ff",
+                    "outline-variant": "#47474e",
+                    "on-secondary": "#25006b",
+                    "on-secondary-container": "#e4daff",
+                    "secondary-fixed": "#d8caff",
+                    "tertiary-fixed": "#ff8fa9",
+                    "tertiary-fixed-dim": "#ff769b",
+                    "inverse-primary": "#006976",
+                    "error-dim": "#d73357",
+                    "on-surface-variant": "#abaab1",
+                    "primary-fixed": "#00e3fd",
+                    "primary-container": "#00e3fd",
+                    "on-secondary-fixed": "#3b00a0",
+                    "on-error-container": "#ffb2b9",
+                    "primary": "#81ecff",
+                    "on-surface": "#f7f5fd",
+                    "error": "#ff6e84",
+                    "on-tertiary-container": "#100003",
+                    "tertiary": "#ff6c95",
+                    "secondary-fixed-dim": "#cabaff",
+                    "secondary-container": "#591adc",
+                    "on-primary": "#005762",
+                    "surface-dim": "#0d0e13",
+                    "surface-container-low": "#121319",
+                    "on-primary-container": "#004d57",
+                    "inverse-on-surface": "#54545b",
+                    "surface-variant": "#24252d",
+                    "surface-bright": "#2a2c34",
+                    "on-tertiary-fixed-variant": "#770033",
+                    "surface-container": "#181920",
+                    "secondary": "#a68cff",
+                    "on-primary-fixed": "#003840",
+                    "on-secondary-fixed-variant": "#591bdc",
+                    "primary-dim": "#00d4ec"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #0d0e13; color: #f7f5fd; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        .glass-panel {
+            background: rgba(36, 37, 45, 0.4);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(71, 71, 78, 0.15);
+        }
+        .neon-glow-primary:hover {
+            box-shadow: 0 0 20px rgba(129, 236, 255, 0.4);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(129,236,255,0.08)] transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-full h-20">
+<div class="flex items-center h-full">
+<div class="h-12 w-auto">
+<img alt="VISION Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhyhr8PT2uYWIuf40X2PGykTBxHR3nNhm1O1vlNc6mNWImXLDDSP3VUY9A5JOcJnDKFmUf3qBTLZd9LhRv_j3wnpL1E7tZ3bOcQgRA-NV-Fk07EJKbq0SkMRImNBvD9X39qBSVYR7hZTSTpzW7ngsU1vkiLs98BfR4sc-tB7rMJ9jzoVExz4h62l6VZI0D58AStgDQxz7UKvTH521U3GWdtfPJZIycJ78KHZbQeLLgkBfMZATvdG-_GkbNXZWnpuXgfL3PPlizYuw"/>
+</div>
+</div>
+<nav class="hidden lg:flex gap-10 items-center">
+<a class="font-['Space_Grotesk'] tracking-tight text-slate-400 hover:text-[#a68cff] transition-colors text-sm font-bold uppercase" href="#">Home</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-slate-400 hover:text-[#a68cff] transition-colors text-sm font-bold uppercase" href="#">Chi Siamo</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-[#81ecff] border-b-2 border-[#81ecff] pb-1 text-sm font-bold uppercase" href="#">Contattaci</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-white hover:text-[#81ecff] transition-colors text-sm font-bold uppercase bg-white/10 px-6 py-2 rounded-full" href="#">ESPERIENZE</a>
+</nav>
+<div class="lg:hidden">
+<a class="font-['Space_Grotesk'] tracking-tight text-white text-xs font-bold uppercase bg-white/10 px-4 py-2 rounded-full" href="#">ESPERIENZE</a>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto overflow-hidden">
+<!-- Hero Section -->
+<header class="mb-20 relative">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute top-0 -right-24 w-80 h-80 bg-secondary/10 rounded-full blur-[100px]"></div>
+<div class="relative z-10">
+<h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-6 leading-none">
+                    Entra nel <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Portale</span>
+</h1>
+<p class="max-w-2xl text-on-surface-variant text-lg md:text-xl font-light leading-relaxed">
+                    Inizia oggi la tua esperienza immersiva. Scrivici per un preventivo o una consulenza gratuita. I nostri esperti di realtà aumentata trasformeranno la tua visione in realtà digitale.
+                </p>
+</div>
+</header>
+<!-- Main Content Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Contact Form Card -->
+<section class="lg:col-span-7 glass-panel p-8 md:p-12 rounded-[2rem] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-3xl rounded-full"></div>
+<form action="#" class="space-y-8 relative z-10" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-secondary font-bold">Nome</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3" placeholder="Mario" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-secondary font-bold">Cognome</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3" placeholder="Rossi" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-secondary font-bold">Email</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3" placeholder="mario.rossi@vision.ar" type="email"/>
+</div>
+<div class="space-y-4">
+<label class="text-xs uppercase tracking-widest text-secondary font-bold">Tipo di Cliente</label>
+<div class="flex gap-4">
+<label class="flex-1 cursor-pointer group">
+<input checked="" class="hidden peer" name="client_type" type="radio" value="Privato"/>
+<div class="px-6 py-4 rounded-xl border border-outline-variant bg-surface-container peer-checked:border-primary peer-checked:bg-primary/10 transition-all text-center group-hover:border-primary/50">
+<span class="text-on-surface-variant peer-checked:text-primary font-medium">Privato</span>
+</div>
+</label>
+<label class="flex-1 cursor-pointer group">
+<input class="hidden peer" name="client_type" type="radio" value="Azienda"/>
+<div class="px-6 py-4 rounded-xl border border-outline-variant bg-surface-container peer-checked:border-primary peer-checked:bg-primary/10 transition-all text-center group-hover:border-primary/50">
+<span class="text-on-surface-variant peer-checked:text-primary font-medium">Azienda</span>
+</div>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-secondary font-bold">Oggetto</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3" placeholder="Richiesta Preventivo Evento" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-secondary font-bold">Messaggio</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3 resize-none" placeholder="Descrivi il tuo progetto..." rows="4"></textarea>
+</div>
+<button class="w-full py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg tracking-tight neon-glow-primary active:scale-95 transition-all duration-150 flex items-center justify-center gap-2 group" type="submit">
+                        Invia Messaggio
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="rocket_launch">rocket_launch</span>
+</button>
+</form>
+</section>
+<!-- Sidebar Info Section -->
+<aside class="lg:col-span-5 flex flex-col gap-8">
+<!-- Contact Info Card -->
+<div class="glass-panel p-8 rounded-[2rem] flex-1">
+<h3 class="text-2xl font-bold mb-8 flex items-center gap-2">
+<span class="text-primary material-symbols-outlined" data-icon="info">info</span>
+                        Contatti Diretti
+                    </h3>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="alternate_email">alternate_email</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-secondary font-bold mb-1">Email di Supporto</p>
+<p class="text-on-surface text-lg">portal@vision-ar.com</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-secondary font-bold mb-1">Headquarters</p>
+<p class="text-on-surface text-lg">Via della Realtà Virtuale, 42<br/>20121 Milano, Italia</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary" data-icon="schedule">schedule</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-secondary font-bold mb-1">Orari Portale</p>
+<p class="text-on-surface text-lg">Lun - Ven: 09:00 - 19:00</p>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-12 border-t border-outline-variant/30">
+<p class="text-xs uppercase tracking-widest text-secondary font-bold mb-6">Seguici nel Multiverso</p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+<a class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:text-primary transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Interactive Map Teaser -->
+<div class="h-64 rounded-[2rem] overflow-hidden relative group">
+<img alt="Location Map" class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" data-alt="Futuristic glowing neon city map showing digital connections and data points in Milan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO4CD8qEHY7FRG7S6v8z-0lJFxdD5vVVLxI9gtu0kOrqkiVEKrfW8jKm_oP5vKTMZHcqoiJVnY9pzu-dS6KM1E-_Qw5iUWgvLVt4vxG2le7Yz85oxJWJAFwRFmg06s_UwZYQKdEBhHUEmoOrFReoRqldkPxE75JKPE8NRpKZRPEYeUEd2H6XfZCTMmthjLSlVVNUpeV2K5PpCuQOGlzoj8fLzbqRPkEWJeiA_A4Od8rzy2MJHb5FrMFVN1AhLna7_sN44va_l05R0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex items-center gap-2 bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full border border-primary/30 mb-2 w-fit">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Live Location</span>
+</div>
+<p class="text-xl font-bold tracking-tight">Milano HQ</p>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm">Apri Mappa</button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0d0e13] w-full py-12 border-t border-[#47474e]/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+<div class="text-[#81ecff] font-black text-2xl font-['Space_Grotesk'] tracking-tighter">Vision AR</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-sm uppercase tracking-widest">
+<a class="text-gray-500 hover:text-[#a68cff] hover:translate-x-1 transition-transform cursor-pointer" href="#">Home</a>
+<a class="text-gray-500 hover:text-[#a68cff] hover:translate-x-1 transition-transform cursor-pointer" href="#">Chi Siamo</a>
+<a class="text-[#81ecff] transition-colors cursor-pointer" href="#">Contattaci</a>
+<a class="text-gray-500 hover:text-[#a68cff] hover:translate-x-1 transition-transform cursor-pointer" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-[#a68cff] hover:translate-x-1 transition-transform cursor-pointer" href="#">Termini di Servizio</a>
+</div>
+<p class="text-gray-500 text-xs font-['Manrope'] uppercase tracking-widest text-center md:text-right">
+                © 2024 Vision AR Entertainment. Built for the Immersive Portal.
+            </p>
+</div>
+</footer>
+</body></html>
