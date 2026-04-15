@@ -1,4 +1,44 @@
+"use client";
+
+import { useState } from "react";
+
+type Status = "idle" | "sending" | "success" | "error";
+
 export default function ContactSection() {
+  const [nome, setNome] = useState("");
+  const [cognome, setCognome] = useState("");
+  const [email, setEmail] = useState("");
+  const [clientType, setClientType] = useState("Privato");
+  const [oggetto, setOggetto] = useState("");
+  const [messaggio, setMessaggio] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
+    setErrorMsg(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, cognome, email, clientType, oggetto, messaggio }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        setErrorMsg(data.error ?? "Errore durante l'invio");
+        setStatus("error");
+        return;
+      }
+      setStatus("success");
+      setNome(""); setCognome(""); setEmail(""); setOggetto(""); setMessaggio("");
+      setClientType("Privato");
+    } catch {
+      setErrorMsg("Errore di rete");
+      setStatus("error");
+    }
+  }
+
   return (
     <section className="pt-32 pb-24 w-full px-6 md:px-12 lg:px-24 overflow-hidden">
       {/* Hero Section */}
@@ -24,12 +64,16 @@ export default function ContactSection() {
         {/* Contact Form Card */}
         <div className="lg:col-span-7 bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 p-8 md:p-12 rounded-[2rem] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-3xl rounded-full"></div>
-          <form className="space-y-8 relative z-10" method="POST">
+          <form className="space-y-8 relative z-10" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-widest text-secondary font-bold">Nome</label>
                 <input
                   type="text"
+                  name="nome"
+                  required
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
                   placeholder="Mario"
                   className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3"
                 />
@@ -38,6 +82,10 @@ export default function ContactSection() {
                 <label className="text-xs uppercase tracking-widest text-secondary font-bold">Cognome</label>
                 <input
                   type="text"
+                  name="cognome"
+                  required
+                  value={cognome}
+                  onChange={(e) => setCognome(e.target.value)}
                   placeholder="Rossi"
                   className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3"
                 />
@@ -48,6 +96,10 @@ export default function ContactSection() {
               <label className="text-xs uppercase tracking-widest text-secondary font-bold">Email</label>
               <input
                 type="email"
+                name="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="mario.rossi@vision.ar"
                 className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3"
               />
@@ -57,13 +109,13 @@ export default function ContactSection() {
               <label className="text-xs uppercase tracking-widest text-secondary font-bold">Tipo di Cliente</label>
               <div className="flex gap-4">
                 <label className="flex-1 cursor-pointer group">
-                  <input type="radio" name="client_type" value="Privato" className="hidden peer" defaultChecked />
+                  <input type="radio" name="client_type" value="Privato" className="hidden peer" checked={clientType === "Privato"} onChange={() => setClientType("Privato")} />
                   <div className="px-6 py-4 rounded-xl border border-outline-variant bg-surface-container peer-checked:border-primary peer-checked:bg-primary/10 transition-all text-center group-hover:border-primary/50">
                     <span className="text-on-surface-variant peer-checked:text-primary font-medium">Privato</span>
                   </div>
                 </label>
                 <label className="flex-1 cursor-pointer group">
-                  <input type="radio" name="client_type" value="Azienda" className="hidden peer" />
+                  <input type="radio" name="client_type" value="Azienda" className="hidden peer" checked={clientType === "Azienda"} onChange={() => setClientType("Azienda")} />
                   <div className="px-6 py-4 rounded-xl border border-outline-variant bg-surface-container peer-checked:border-primary peer-checked:bg-primary/10 transition-all text-center group-hover:border-primary/50">
                     <span className="text-on-surface-variant peer-checked:text-primary font-medium">Azienda</span>
                   </div>
@@ -75,6 +127,10 @@ export default function ContactSection() {
               <label className="text-xs uppercase tracking-widest text-secondary font-bold">Oggetto</label>
               <input
                 type="text"
+                name="oggetto"
+                required
+                value={oggetto}
+                onChange={(e) => setOggetto(e.target.value)}
                 placeholder="Richiesta Preventivo Evento"
                 className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3"
               />
@@ -83,6 +139,10 @@ export default function ContactSection() {
             <div className="space-y-2">
               <label className="text-xs uppercase tracking-widest text-secondary font-bold">Messaggio</label>
               <textarea
+                name="messaggio"
+                required
+                value={messaggio}
+                onChange={(e) => setMessaggio(e.target.value)}
                 placeholder="Descrivi il tuo progetto..."
                 rows={4}
                 className="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all duration-300 py-3 resize-none"
@@ -91,13 +151,25 @@ export default function ContactSection() {
 
             <button
               type="submit"
-              className="w-full py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg tracking-tight hover:shadow-[0_0_20px_rgba(129,236,255,0.4)] active:scale-95 transition-all duration-150 flex items-center justify-center gap-2 group"
+              disabled={status === "sending"}
+              className="w-full py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg tracking-tight hover:shadow-[0_0_20px_rgba(129,236,255,0.4)] active:scale-95 transition-all duration-150 flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Invia Messaggio
+              {status === "sending" ? "Invio in corso..." : "Invia Messaggio"}
               <span className="material-symbols-outlined transition-transform group-hover:translate-x-1" style={{ fontVariationSettings: "'FILL' 1" }}>
                 rocket_launch
               </span>
             </button>
+
+            {status === "success" && (
+              <p className="text-center text-primary font-medium">
+                Messaggio inviato! Ti abbiamo mandato una conferma via email.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-center text-red-400 font-medium">
+                {errorMsg ?? "Errore durante l'invio, riprova."}
+              </p>
+            )}
           </form>
         </div>
 
