@@ -43,7 +43,6 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <div className="flex gap-4">
               <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-primary transition-colors">Termini di Servizio</Link>
             </div>
             <div className="flex items-center gap-4 border-l border-white/10 pl-6">
               <button className="text-white/40 hover:text-[#13d6ec] transition-colors"><Globe className="w-4 h-4" /></button>

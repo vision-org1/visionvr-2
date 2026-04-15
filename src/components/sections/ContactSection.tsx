@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -11,6 +12,7 @@ export default function ContactSection() {
   const [clientType, setClientType] = useState("Privato");
   const [oggetto, setOggetto] = useState("");
   const [messaggio, setMessaggio] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
@@ -33,6 +35,7 @@ export default function ContactSection() {
       setStatus("success");
       setNome(""); setCognome(""); setEmail(""); setOggetto(""); setMessaggio("");
       setClientType("Privato");
+      setPrivacyAccepted(false);
     } catch {
       setErrorMsg("Errore di rete");
       setStatus("error");
@@ -149,9 +152,33 @@ export default function ContactSection() {
               ></textarea>
             </div>
 
+            <label className="flex items-start gap-3 cursor-pointer group">
+              <input
+                type="checkbox"
+                required
+                checked={privacyAccepted}
+                onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                className="mt-1 w-5 h-5 rounded border-outline-variant bg-surface-container-low accent-primary cursor-pointer shrink-0"
+              />
+              <span className="text-xs text-on-surface-variant leading-relaxed">
+                Ho letto la{" "}
+                <Link
+                  href="/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-medium"
+                >
+                  Privacy Policy
+                </Link>{" "}
+                e acconsento al trattamento dei miei dati personali per rispondere alla
+                mia richiesta, ai sensi dell'art. 6, par. 1, lett. a) del Regolamento UE
+                2016/679 (GDPR).
+              </span>
+            </label>
+
             <button
               type="submit"
-              disabled={status === "sending"}
+              disabled={status === "sending" || !privacyAccepted}
               className="w-full py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg tracking-tight hover:shadow-[0_0_20px_rgba(129,236,255,0.4)] active:scale-95 transition-all duration-150 flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {status === "sending" ? "Invio in corso..." : "Invia Messaggio"}
