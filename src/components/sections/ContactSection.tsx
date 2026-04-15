@@ -213,20 +213,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="mt-12 pt-12 border-t border-outline-variant/30">
-              <p className="text-xs uppercase tracking-widest text-secondary font-bold mb-6">Seguici nel Multiverso</p>
-              <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 rounded-full bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 flex items-center justify-center hover:text-primary transition-all active:scale-90">
-                  <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>share</span>
-                </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 flex items-center justify-center hover:text-primary transition-all active:scale-90">
-                  <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>public</span>
-                </a>
-                <a href="#" className="w-12 h-12 rounded-full bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 flex items-center justify-center hover:text-primary transition-all active:scale-90">
-                  <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>play_circle</span>
-                </a>
-              </div>
-            </div>
+            
           </div>
 
           {/* Interactive Map Teaser */}
