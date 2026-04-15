@@ -20,16 +20,16 @@ export const homeData: HomeData = {
         title: "Eventi Aziendali",
         description:
           "Soluzioni innovative per il tuo business. Team building immersivi, lanci di prodotto futuristici e presentazioni che lasciano il segno.",
-        linkText: "Esplora Corporate trending_flat",
-        href: "/corporate",
+        linkText: "",
+        href: "/contact",
       },
       {
         id: "private",
         title: "Feste Private",
         description:
           "Divertimento unico per ogni occasione. Matrimoni, compleanni ed eventi privati trasformati in esperienze multisensoriali senza precedenti.",
-        linkText: "Scopri Private trending_flat",
-        href: "/private",
+        linkText: "",
+        href: "/contact",
       },
     ],
   },
@@ -65,10 +65,10 @@ export const homeData: HomeData = {
     buttonText: "Contattaci",
   },
   footerLinks: [
-    { id: "experiences", label: "EXPERIENCES", href: "/solutions" },
-    { id: "corporate", label: "CORPORATE", href: "/corporate" },
-    { id: "private", label: "PRIVATE", href: "/private" },
-    { id: "tech", label: "TECHNOLOGY", href: "/technology" },
-    { id: "contact", label: "CONTACT", href: "/contact" },
+    //{ id: "experiences", label: "EXPERIENCES", href: "/solutions" },
+    //{ id: "corporate", label: "CORPORATE", href: "/corporate" },
+    //{ id: "private", label: "PRIVATE", href: "/private" },
+    //{ id: "tech", label: "TECHNOLOGY", href: "/technology" },
+    //{ id: "contact", label: "CONTACT", href: "/contact" },
   ],
 };
