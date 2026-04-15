@@ -117,7 +117,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-secondary font-bold mb-1">Email di Supporto</p>
-                  <p className="text-on-surface text-lg">portal@vision-ar.com</p>
+                  <p className="text-on-surface text-lg">simone@omosex.it</p>
                 </div>
               </div>
               
@@ -171,10 +171,17 @@ export default function ContactSection() {
                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
                 <span className="text-[10px] font-bold text-primary tracking-widest uppercase">Live Location</span>
               </div>
-              <p className="text-xl font-bold tracking-tight">Milano HQ</p>
+              <p className="text-xl font-bold tracking-tight">Portici HQ</p>
             </div>
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <button className="bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm">Apri Mappa</button>
+              <a //rimosso bottone e inserito link a google
+                href="https://www.google.com/maps/place/80055+Portici+NA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm inline-block"
+              >
+                Apri Mappa
+              </a>
             </div>
           </div>
         </aside>

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { homeData } from "@/data/homeData";
 import { Button } from "@/components/ui/button";
 
+import Link from "next/link";
+
 export function CTA() {
   return (
     <section className="py-24 relative p-6">
@@ -38,12 +40,12 @@ export function CTA() {
            viewport={{ once: true, margin: "-100px" }}
            transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Button 
-            size="lg" 
-            className="bg-white text-black hover:bg-white/90 font-bold px-10 h-16 rounded-lg text-lg shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-transform hover:scale-105"
+          <Link
+            href="/contact"
+            className="bg-white text-black hover:bg-white/90 font-bold px-10 h-16 rounded-lg text-lg shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-transform hover:scale-105 inline-flex items-center justify-center"
           >
             PARLA CON NOI
-          </Button>
+          </Link>
         </motion.div>
         </div>
       </div>

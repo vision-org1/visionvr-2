@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { homeData } from "@/data/homeData";
+import Link from "next/link" //import per aggiungere link ai contatti sul pulsante prenota ora
 
 export function Hero() {
   return (
@@ -57,12 +58,14 @@ export function Hero() {
            style={{ willChange: "transform, opacity" }}
            className="mt-10 flex flex-col sm:flex-row gap-4"
         >
-          <button className="px-8 py-4 rounded-md font-bold text-black bg-gradient-to-r from-[#13d6ec] to-[#0d59f2] shadow-[0_0_20px_rgba(19,214,236,0.3)] hover:shadow-[0_0_30px_rgba(19,214,236,0.5)] transition-all">
-            Prenota Ora
-          </button>
-          <button className="px-8 py-4 rounded-md font-bold text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center">
-            Scopri di Più <span className="ml-2">→</span>
-          </button>
+          
+            <Link //qui ho tolto il pulsante vecchio e aggiunto il link alla pagina contatti
+              href="/contact"
+              className="px-8 py-4 rounded-md font-bold text-black bg-gradient-to-r from-[#13d6ec] to-[#0d59f2] shadow-[0_0_20px_rgba(19,214,236,0.3)] hover:shadow-[0_0_30px_rgba(19,214,236,0.5)] transition-all inline-block"
+            >
+              Prenota Ora
+            </Link>
+            
         </motion.div>
         
         </div>
