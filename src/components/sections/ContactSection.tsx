@@ -199,10 +199,9 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-secondary font-bold mb-1">Headquarters</p>
-                  <p className="text-on-surface text-lg">Via della Realtà Virtuale, 42<br />20121 Milano, Italia</p>
+                  <p className="text-on-surface text-lg"><br /></p>
                 </div>
               </div>
-              
               <div className="flex gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center shrink-0">
                   <span className="material-symbols-outlined text-tertiary" style={{ fontVariationSettings: "'FILL' 1" }}>schedule</span>
