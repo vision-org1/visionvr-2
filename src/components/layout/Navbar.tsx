@@ -35,8 +35,8 @@ export function Navbar() {
       <div
         // Riattiviamo i pointer events SOLO per il container interno Nav
         className={`pointer-events-auto flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${isScrolled
-            ? "max-w-fit px-4 md:px-8 py-2 mt-4 bg-[#050505]/75 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-white/10 rounded-full"
-            : "w-full max-w-[1400px] px-8 md:px-16 py-2 lg:py-2 bg-transparent"
+            ? "w-[95%] lg:w-full max-w-[600px] px-6 py-2 mt-4 bg-[#050505]/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-white/10 rounded-[50px]"
+            : "w-full max-w-[1400px] px-8 md:px-16 py-2 lg:py-2 bg-transparent border border-transparent rounded-[0px]"
           }`}
       >
         {/*
@@ -46,24 +46,21 @@ export function Navbar() {
         */}
         <Link
           href="/"
-          className={`relative flex-none flex items-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            isScrolled ? "w-[50px] h-[50px]" : "w-[120px] h-[120px] md:w-[160px] md:h-[160px]"
+          className={`relative flex-none flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isScrolled ? "w-[50px] h-[50px]" : "w-[90px] h-[90px] md:w-[100px] md:h-[100px]"
           }`}
         >
           <Image
             src="/logocerchio-Photoroom.png"
             alt="Vision"
             fill
-            sizes="(max-width: 768px) 120px, 150px"
+            sizes="(max-width: 768px) 150px, 200px"
             priority
-            className="object-contain drop-shadow-md"
+            className={`object-contain drop-shadow-md transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+              isScrolled ? "scale-[1.8]" : "scale-[1.5] md:scale-[2]"
+            }`}
           />
         </Link>
-        
-        {/* Spaziatore fluido per l'animazione di convergenza al centro */}
-        <div className={`transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          isScrolled ? "w-2 md:w-6 flex-none" : "flex-1"
-        }`} />
 
         {/* Global Navigation - Spazi azzerati durante lo scroll */}
         <nav className={`hidden lg:flex items-center flex-none transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${isScrolled ? 'gap-1' : 'gap-8'}`}>
