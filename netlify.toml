@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # CONTACT_TO_EMAIL contiene l'email del Titolare del Trattamento, che è
+  # volutamente pubblicata nella pagina /privacy per adempiere al GDPR
+  # (contatto per esercizio dei diritti dell'interessato). Non è un segreto.
+  SECRETS_SCAN_OMIT_KEYS = "CONTACT_TO_EMAIL,CONTACT_FROM_EMAIL"
