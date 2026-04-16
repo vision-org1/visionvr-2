@@ -64,11 +64,4 @@ export const homeData: HomeData = {
       "Contattaci oggi stesso per un preventivo personalizzato e una consulenza gratuita sulle nostre esperienze AR.",
     buttonText: "Contattaci",
   },
-  footerLinks: [
-    //{ id: "experiences", label: "EXPERIENCES", href: "/solutions" },
-    //{ id: "corporate", label: "CORPORATE", href: "/corporate" },
-    //{ id: "private", label: "PRIVATE", href: "/private" },
-    //{ id: "tech", label: "TECHNOLOGY", href: "/technology" },
-    //{ id: "contact", label: "CONTACT", href: "/contact" },
-  ],
 };

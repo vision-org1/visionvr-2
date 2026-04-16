@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { homeData } from "@/data/homeData";
-import { ArrowRight, Briefcase, PartyPopper } from "lucide-react";
+import { Briefcase, PartyPopper } from "lucide-react";
 
 export function Solutions() {
   return (
@@ -42,14 +42,9 @@ export function Solutions() {
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {solution.title}
                 </h3>
-                <p className="text-white/60 mb-8 font-light leading-relaxed">
+                <p className="text-white/60 font-light leading-relaxed">
                   {solution.description}
                 </p>
-                
-                <div className="flex items-center text-[#13d6ec] font-bold group-hover:text-white transition-colors">
-                  {solution.linkText.replace(" trending_flat", "")}
-                  <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
-                </div>
               </Link>
             </motion.div>
           ))}

@@ -39,5 +39,4 @@ export interface HomeData {
     subtitle: string;
     buttonText: string;
   };
-  footerLinks: NavLink[];
 }

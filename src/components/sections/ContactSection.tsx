@@ -62,15 +62,15 @@ export default function ContactSection() {
         </div>
       </div>
 
-      {/* Main Content Bento Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      {/* Main Content */}
+      <div className="max-w-3xl mx-auto">
         {/* Contact Form Card */}
-        <div className="lg:col-span-7 bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 p-8 md:p-12 rounded-[2rem] relative overflow-hidden">
+        <div className="bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 p-8 md:p-12 rounded-[2rem] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-3xl rounded-full"></div>
           <form className="space-y-8 relative z-10" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-secondary font-bold">Nome</label>
+                <label className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Nome</label>
                 <input
                   type="text"
                   name="nome"
@@ -82,7 +82,7 @@ export default function ContactSection() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-secondary font-bold">Cognome</label>
+                <label className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Cognome</label>
                 <input
                   type="text"
                   name="cognome"
@@ -96,7 +96,7 @@ export default function ContactSection() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest text-secondary font-bold">Email</label>
+              <label className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Email</label>
               <input
                 type="email"
                 name="email"
@@ -109,7 +109,7 @@ export default function ContactSection() {
             </div>
 
             <div className="space-y-4">
-              <label className="text-xs uppercase tracking-widest text-secondary font-bold">Tipo di Cliente</label>
+              <label className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Tipo di Cliente</label>
               <div className="flex gap-4">
                 <label className="flex-1 cursor-pointer group">
                   <input type="radio" name="client_type" value="Privato" className="hidden peer" checked={clientType === "Privato"} onChange={() => setClientType("Privato")} />
@@ -127,7 +127,7 @@ export default function ContactSection() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest text-secondary font-bold">Oggetto</label>
+              <label className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Oggetto</label>
               <input
                 type="text"
                 name="oggetto"
@@ -140,7 +140,7 @@ export default function ContactSection() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest text-secondary font-bold">Messaggio</label>
+              <label className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Messaggio</label>
               <textarea
                 name="messaggio"
                 required
@@ -200,76 +200,34 @@ export default function ContactSection() {
           </form>
         </div>
 
-        {/* Sidebar Info Section */}
-        <aside className="lg:col-span-5 flex flex-col gap-8">
-          {/* Contact Info Card */}
-          <div className="bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 p-8 rounded-[2rem] flex-1">
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-              <span className="text-primary material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>info</span>
-              Contatti Diretti
-            </h3>
-            
-            <div className="space-y-8">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>alternate_email</span>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-secondary font-bold mb-1">Email di Supporto</p>
-                  <p className="text-on-surface text-lg">simone@omosex.it</p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-secondary" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-secondary font-bold mb-1">Headquarters</p>
-                  <p className="text-on-surface text-lg"><br /></p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-tertiary" style={{ fontVariationSettings: "'FILL' 1" }}>schedule</span>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-secondary font-bold mb-1">Orari Portale</p>
-                  <p className="text-on-surface text-lg">Lun - Ven: 09:00 - 19:00</p>
-                </div>
-              </div>
+        {/* Contatti Diretti - sotto il form */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a
+            href="mailto:simone@omosex.it"
+            className="bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 p-6 rounded-2xl flex gap-4 items-center hover:border-primary/40 hover:bg-[#24252d]/60 transition-all duration-300 group"
+          >
+            <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+              <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>alternate_email</span>
             </div>
+            <div className="min-w-0">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1">Email</p>
+              <p className="text-on-surface text-lg truncate">simone@omosex.it</p>
+            </div>
+          </a>
 
-            
-          </div>
-
-          {/* Interactive Map Teaser */}
-          <div className="h-64 rounded-[2rem] overflow-hidden relative group">
-            <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO4CD8qEHY7FRG7S6v8z-0lJFxdD5vVVLxI9gtu0kOrqkiVEKrfW8jKm_oP5vKTMZHcqoiJVnY9pzu-dS6KM1E-_Qw5iUWgvLVt4vxG2le7Yz85oxJWJAFwRFmg06s_UwZYQKdEBhHUEmoOrFReoRqldkPxE75JKPE8NRpKZRPEYeUEd2H6XfZCTMmthjLSlVVNUpeV2K5PpCuQOGlzoj8fLzbqRPkEWJeiA_A4Od8rzy2MJHb5FrMFVN1AhLna7_sN44va_l05R0" 
-              alt="Location Map" 
-              className="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-            <div className="absolute bottom-6 left-6">
-              <div className="flex items-center gap-2 bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full border border-primary/30 mb-2 w-fit">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-                <span className="text-[10px] font-bold text-primary tracking-widest uppercase">Live Location</span>
-              </div>
-              <p className="text-xl font-bold tracking-tight">Portici HQ</p>
+          <a
+            href="tel:+393337948898"
+            className="bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 p-6 rounded-2xl flex gap-4 items-center hover:border-primary/40 hover:bg-[#24252d]/60 transition-all duration-300 group"
+          >
+            <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+              <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
             </div>
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <a //rimosso bottone e inserito link a google
-                href="https://www.google.com/maps/place/80055+Portici+NA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary text-on-primary px-6 py-3 rounded-full font-bold text-sm inline-block"
-              >
-                Apri Mappa
-              </a>
+            <div className="min-w-0">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1">Telefono</p>
+              <p className="text-on-surface text-lg">+39 333 79 48 898</p>
             </div>
-          </div>
-        </aside>
+          </a>
+        </div>
       </div>
     </section>
   );
