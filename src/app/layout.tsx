@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { SmoothScrolling } from "@/components/layout/SmoothScrolling";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -48,9 +47,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-full flex flex-col selection:bg-primary/30">
-        <SmoothScrolling>
-          {children}
-        </SmoothScrolling>
+        {children}
       </body>
     </html>
   );
