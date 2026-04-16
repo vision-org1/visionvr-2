@@ -50,10 +50,12 @@ export default function ContactSection() {
         <div className="absolute top-0 -right-24 w-80 h-80 bg-secondary/10 rounded-full blur-[100px]"></div>
         <div className="relative z-10">
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 leading-none">
-            Entra nel <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#81ecff] to-primary">
+            Entra nel  
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#81ecff] to-primary">
               Portale
             </span>
+            <br />
+           
           </h1>
           <p className="max-w-2xl text-on-surface-variant text-lg md:text-xl font-light leading-relaxed">
             Inizia oggi la tua esperienza immersiva. Scrivici per un preventivo o una consulenza gratuita. 

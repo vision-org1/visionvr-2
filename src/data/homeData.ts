@@ -19,7 +19,7 @@ export const homeData: HomeData = {
         id: "corporate",
         title: "Eventi Aziendali",
         description:
-          "Soluzioni innovative per il tuo business. Team building immersivi, lanci di prodotto futuristici e presentazioni che lasciano il segno.",
+          "Soluzioni innovative per il tuo business. Organizza eventi di Team Building immersivi e innovativi, fondendo la realtà e un mondo tutto da scoprire.",
         linkText: "",
         href: "/contact",
       },
