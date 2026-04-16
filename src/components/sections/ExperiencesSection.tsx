@@ -1,6 +1,18 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 
 export default function ExperiencesSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const distance = el.clientWidth * 0.8;
+    el.scrollBy({ left: direction === "left" ? -distance : distance, behavior: "smooth" });
+  };
+
   return (
     <section className="pt-24 pb-20">
       {/* Hero Section */}
@@ -23,16 +35,16 @@ export default function ExperiencesSection() {
         <div className="px-6 md:px-12 lg:px-24 w-full flex justify-between items-end mb-8">
           <h2 className="text-3xl font-headline font-bold">In Primo Piano</h2>
           <div className="flex gap-2">
-            <button className="p-2 rounded-full border border-outline-variant hover:bg-surface-container-high transition-colors">
-              <span className="material-symbols-outlined select-none" style={{ fontVariationSettings: "'FILL' 1" }}>chevron_left</span>
+            <button onClick={() => scroll("left")} aria-label="Scorri a sinistra" className="group w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant hover:bg-surface-container-high hover:border-primary/60 active:scale-95 transition-all cursor-pointer">
+              <span className="material-symbols-outlined select-none leading-none text-[20px] transition-transform duration-300 group-hover:-translate-x-1" style={{ fontVariationSettings: "'FILL' 1" }}>chevron_left</span>
             </button>
-            <button className="p-2 rounded-full border border-outline-variant hover:bg-surface-container-high transition-colors">
-              <span className="material-symbols-outlined select-none" style={{ fontVariationSettings: "'FILL' 1" }}>chevron_right</span>
+            <button onClick={() => scroll("right")} aria-label="Scorri a destra" className="group w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant hover:bg-surface-container-high hover:border-primary/60 active:scale-95 transition-all cursor-pointer">
+              <span className="material-symbols-outlined select-none leading-none text-[20px] transition-transform duration-300 group-hover:translate-x-1" style={{ fontVariationSettings: "'FILL' 1" }}>chevron_right</span>
             </button>
           </div>
         </div>
 
-        <div className="flex gap-6 overflow-x-auto px-6 pb-8 scrollbar-hide scroll-smooth">
+        <div ref={scrollRef} className="flex gap-6 overflow-x-auto px-6 pb-8 scrollbar-hide scroll-smooth">
           {EXPERIENCES.map((exp, index) => (
             <div key={index} className="min-w-[320px] md:min-w-[450px] group relative overflow-hidden rounded-xl bg-[#24252d]/40 backdrop-blur-[20px] border border-white/5 transition-all duration-500 hover:-translate-y-2">
               <div className="h-64 md:h-80 relative overflow-hidden">

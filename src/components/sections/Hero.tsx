@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { homeData } from "@/data/homeData";
+import Image from "next/image";
 import Link from "next/link" //import per aggiungere link ai contatti sul pulsante prenota ora
 
 export function Hero() {
@@ -34,7 +35,14 @@ export function Hero() {
           style={{ willChange: "transform, opacity" }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white max-w-4xl leading-tight"
         >
-          {homeData.hero.title.split(": ")[0]}:<br />
+          <Image
+            src="/logo-wordmark.png"
+            alt="Vision"
+            width={2000}
+            height={1116}
+            priority
+            className="h-40 md:h-56 lg:h-72 w-auto -mt-8 -mb-12 md:-mt-12 md:-mb-16 lg:-mt-16 lg:-mb-24 -ml-3 animate-logo-pulse"
+          />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#13d6ec] to-[#0d59f2]">
             {homeData.hero.title.split(": ")[1]}
           </span>
