@@ -205,7 +205,7 @@ export default function ContactSection() {
         {/* Contatti Diretti - sotto il form */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           <a
-            href="mailto:simone@omosex.it"
+            href="mailto:info@visionvr.it"
             className="bg-[#24252d]/40 backdrop-blur-[24px] border border-[#47474e]/15 p-6 rounded-2xl flex gap-4 items-center hover:border-primary/40 hover:bg-[#24252d]/60 transition-all duration-300 group"
           >
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -213,7 +213,7 @@ export default function ContactSection() {
             </div>
             <div className="min-w-0">
               <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1">Email</p>
-              <p className="text-on-surface text-lg truncate">simone@omosex.it</p>
+              <p className="text-on-surface text-lg truncate">info@visionvr.it</p>
             </div>
           </a>
 
