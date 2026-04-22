@@ -70,7 +70,7 @@ export async function POST(request: Request) {
     <p style="white-space:pre-wrap">${escapeHtml(messaggio)}</p>
   `;
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://visionvr.it";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.visionvr.it";
   const logoUrl = `${siteUrl}/logo-wordmark.png`;
 
   const userHtml = `<!DOCTYPE html>
@@ -188,7 +188,7 @@ export async function POST(request: Request) {
                 Telefono: <a href="tel:+393337948898" style="color:#0d59f2;text-decoration:none;">+39 333 79 48 898</a>
               </p>
               <p style="margin:0;font-size:14px;line-height:1.6;color:#404040;">
-                Sito: <a href="${siteUrl}" style="color:#0d59f2;text-decoration:none;">visionvr.it</a>
+                Sito: <a href="${siteUrl}" style="color:#0d59f2;text-decoration:none;">www.visionvr.it</a>
               </p>
             </td>
           </tr>
