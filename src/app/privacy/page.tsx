@@ -66,10 +66,10 @@ export default function PrivacyPage() {
                 <p className="text-on-surface-variant">
                   Email di contatto:{" "}
                   <a
-                    href="mailto:domenico.formisano2001@gmail.com"
+                    href="mailto:info@visionvr.it"
                     className="text-primary hover:underline"
                   >
-                    domenico.formisano2001@gmail.com
+                    info@visionvr.it
                   </a>
                 </p>
               </div>
@@ -186,10 +186,10 @@ export default function PrivacyPage() {
                 Per esercitare questi diritti è sufficiente inviare una richiesta
                 all'indirizzo{" "}
                 <a
-                  href="mailto:domenico.formisano2001@gmail.com"
+                  href="mailto:info@visionvr.it"
                   className="text-primary hover:underline"
                 >
-                  domenico.formisano2001@gmail.com
+                  info@visionvr.it
                 </a>
                 . L'interessato ha inoltre diritto di proporre reclamo all'Autorità
                 Garante per la Protezione dei Dati Personali (
