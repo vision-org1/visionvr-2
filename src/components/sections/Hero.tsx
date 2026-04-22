@@ -10,7 +10,7 @@ export function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-start overflow-hidden pt-32 lg:pt-48">
       {/* Background Image & Effects */}
       <div
-        className="absolute inset-0 z-0 bg-[#050505] bg-cover bg-right bg-no-repeat opacity-80"
+        className="absolute inset-0 z-0 bg-[#050505] bg-cover bg-center md:bg-right bg-no-repeat opacity-80"
         style={{ backgroundImage: "url('/nero.png')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-transparent w-full md:w-2/3" />
